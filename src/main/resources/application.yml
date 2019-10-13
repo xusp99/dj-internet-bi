@@ -1,0 +1,21 @@
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates
+    suffix: .ftl
+  mvc:
+    static-path-pattern: /static/**
+  thymeleaf:
+    cache: false
+
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/layui-boot?characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    #    hibernate:
+    #       ddl‐auto: update # 更新或者创建数据库表结构,省略时将不会自动生成数据库表
+    #       show‐sql: true # 控制台是否显示SQL
+    generate-ddl: true # 是否根据实体(@Entity)自动建表，默认为 false。
+    show-sql: true # 是否显示 sql 语句
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
